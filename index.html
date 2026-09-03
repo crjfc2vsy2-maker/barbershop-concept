@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oakmont Barber Co. — a concept website for a premium barbershop. Fictional business, designed and built by Vladyslav as a portfolio piece."
+    />
+    <meta name="color-scheme" content="dark" />
+    <title>Oakmont Barber Co. — Concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="#top" aria-label="Oakmont Barber Co., back to top">
+          <span class="brand__mark" aria-hidden="true">O</span>
+          <span class="brand__name">
+            Oakmont <span class="brand__sub">Barber Co.</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+          <ul class="primary-nav__list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#hours">Hours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a class="btn btn--primary btn--sm primary-nav__cta" href="#booking">Book now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="wrap hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Copenhagen &middot; Est. 2019</p>
+            <h1 id="hero-title" class="hero__title">
+              A sharp cut, and the time to enjoy it.
+            </h1>
+            <p class="hero__lead">
+              A two-chair barbershop in N&oslash;rrebro. Traditional barbering,
+              unhurried service, and the chair is yours for the whole
+              appointment.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#booking">Book an appointment</a>
+              <a class="btn btn--ghost" href="#services">See services &amp; prices</a>
+            </div>
+          </div>
+          <figure class="hero__media">
+            <img
+              class="media-img"
+              src="assets/images/hero/barbershop-interior.jpg"
+              alt="A dimly lit barbershop interior with vintage leather chairs along a mirrored wall"
+              width="1600"
+              height="1096"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="wrap section__grid">
+          <header class="section__head">
+            <p class="section__index">01</p>
+            <h2 id="about-title" class="section__title">The shop</h2>
+          </header>
+          <div class="about">
+            <p class="about__lead">
+              Oakmont started with one chair, one clipper, and a simple idea:
+              give people the haircut they actually asked for.
+            </p>
+            <p>
+              We are a booking-first shop. No queue by the door, no rushing you
+              out of the chair &mdash; just two barbers who take the time to get
+              it right, every visit. Fresh towels, a good coffee, and a room
+              that feels like somewhere you would want to sit for an hour.
+            </p>
+            <p>
+              Six years in, most of our clients have been coming since the
+              beginning. We would like to think that says enough.
+            </p>
+            <dl class="figures">
+              <div class="figures__item">
+                <dt>Open since</dt>
+                <dd>2019</dd>
+              </div>
+              <div class="figures__item">
+                <dt>Chairs</dt>
+                <dd>Two</dd>
+              </div>
+              <div class="figures__item">
+                <dt>Average sitting</dt>
+                <dd>45 min</dd>
+              </div>
+              <div class="figures__item">
+                <dt>Rating</dt>
+                <dd>4.9 / 5</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="wrap">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="section__index">02</p>
+              <h2 id="services-title" class="section__title">Services &amp; prices</h2>
+            </div>
+            <p class="section__note">
+              Prices in DKK. Card and MobilePay accepted. Last booking 45
+              minutes before close.
+            </p>
+          </header>
+          <ul class="services-grid" id="servicesGrid"></ul>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="section" id="team" aria-labelledby="team-title">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="section__index">03</p>
+            <h2 id="team-title" class="section__title">The barbers</h2>
+          </header>
+          <ul class="team-grid" id="teamGrid"></ul>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section" id="gallery" aria-labelledby="gallery-title">
+        <div class="wrap">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="section__index">04</p>
+              <h2 id="gallery-title" class="section__title">Recent work</h2>
+            </div>
+            <p class="section__note">
+              Cuts, fades, and beard work from the chair.
+            </p>
+          </header>
+          <ul class="gallery-grid" id="galleryGrid"></ul>
+        </div>
+      </section>
+
+      <!-- HOURS -->
+      <section class="section" id="hours" aria-labelledby="hours-title">
+        <div class="wrap section__grid">
+          <header class="section__head">
+            <p class="section__index">05</p>
+            <h2 id="hours-title" class="section__title">Opening hours</h2>
+          </header>
+          <div class="hours">
+            <p class="hours__status" id="hoursStatus" role="status">
+              <span class="hours__dot" aria-hidden="true"></span>
+              <span id="hoursStatusText">Checking hours&hellip;</span>
+            </p>
+            <table class="hours__table">
+              <caption class="visually-hidden">Weekly opening hours</caption>
+              <tbody id="hoursBody"></tbody>
+            </table>
+            <p class="hours__foot">
+              Public holidays may vary. Booked appointments are always honoured.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="section__index">06</p>
+            <h2 id="testimonials-title" class="section__title">What clients say</h2>
+          </header>
+          <ul class="testimonials-grid" id="testimonialsGrid"></ul>
+        </div>
+      </section>
+
+      <!-- CONTACT + BOOKING -->
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="wrap">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="section__index">07</p>
+              <h2 id="contact-title" class="section__title">Contact &amp; booking</h2>
+            </div>
+            <p class="section__note">
+              Prefer to talk? Call or message during opening hours and we will
+              sort you a slot.
+            </p>
+          </header>
+
+          <div class="contact">
+            <div class="contact__details">
+              <h3 class="contact__subtitle">Get in touch</h3>
+              <ul class="contact__list">
+                <li>
+                  <span class="contact__label">Phone</span>
+                  <a href="tel:+4532145509">+45 32 14 55 09</a>
+                </li>
+                <li>
+                  <span class="contact__label">Email</span>
+                  <a href="mailto:booking@oakmontbarber.dk">booking@oakmontbarber.dk</a>
+                </li>
+                <li>
+                  <span class="contact__label">Address</span>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Ravnsborggade%2014%2C%202200%20K%C3%B8benhavn%20N"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ravnsborggade 14, 2200 K&oslash;benhavn N
+                  </a>
+                </li>
+              </ul>
+
+              <h3 class="contact__subtitle">Follow</h3>
+              <ul class="contact__social">
+                <li><a href="#" aria-label="Instagram (placeholder)">Instagram</a></li>
+                <li><a href="#" aria-label="Facebook (placeholder)">Facebook</a></li>
+              </ul>
+            </div>
+
+            <div class="booking" id="booking">
+              <h3 class="contact__subtitle">Request an appointment</h3>
+              <p class="booking__hint">
+                This is a concept form. Submitting it will not book a real
+                appointment.
+              </p>
+
+              <form class="booking__form" id="bookingForm" novalidate>
+                <div class="field">
+                  <label for="bk-name">Name</label>
+                  <input id="bk-name" name="name" type="text" autocomplete="name" required />
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="bk-phone">Phone</label>
+                    <input id="bk-phone" name="phone" type="tel" autocomplete="tel" required />
+                  </div>
+                  <div class="field">
+                    <label for="bk-email">Email <span class="field__opt">(optional)</span></label>
+                    <input id="bk-email" name="email" type="email" autocomplete="email" />
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="bk-service">Service</label>
+                    <select id="bk-service" name="service" required>
+                      <option value="" selected disabled>Choose a service</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="bk-barber">Barber</label>
+                    <select id="bk-barber" name="barber">
+                      <option value="no-preference" selected>No preference</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="bk-date">Preferred date</label>
+                    <input id="bk-date" name="date" type="date" required />
+                  </div>
+                  <div class="field">
+                    <label for="bk-time">Preferred time</label>
+                    <input id="bk-time" name="time" type="time" required />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="bk-notes">Notes <span class="field__opt">(optional)</span></label>
+                  <textarea id="bk-notes" name="notes" rows="3"></textarea>
+                </div>
+
+                <button class="btn btn--primary" type="submit">Request appointment</button>
+                <p class="booking__error" id="bookingError" role="alert" hidden></p>
+              </form>
+
+              <div class="booking__success" id="bookingSuccess" role="status" hidden>
+                <p class="booking__success-title">Thanks &mdash; request noted.</p>
+                <p>
+                  In a real deployment we would text you to confirm. Since this
+                  is a concept, nothing was sent.
+                </p>
+                <button class="btn btn--ghost btn--sm" type="button" id="bookingReset">
+                  Send another
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section class="section" id="location" aria-labelledby="location-title">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="section__index">08</p>
+            <h2 id="location-title" class="section__title">Find us</h2>
+          </header>
+
+          <div class="location">
+            <div
+              class="location__map"
+              role="img"
+              aria-label="Map placeholder showing the shop location in N&oslash;rrebro, Copenhagen"
+            >
+              <span class="location__pin" aria-hidden="true"></span>
+              <span class="location__map-note">Map placeholder</span>
+            </div>
+            <div class="location__card">
+              <h3 class="contact__subtitle">Oakmont Barber Co.</h3>
+              <address class="location__address">
+                Ravnsborggade 14<br />
+                2200 K&oslash;benhavn N<br />
+                Denmark
+              </address>
+              <p class="location__hint">
+                Two minutes from Nørrebro station. Street parking on
+                Ravnsborggade after 17:00.
+              </p>
+              <a
+                class="btn btn--ghost btn--sm"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Ravnsborggade%2014%2C%202200%20K%C3%B8benhavn%20N"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Get directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING CTA -->
+      <section class="cta" aria-labelledby="cta-title">
+        <div class="wrap cta__inner">
+          <p class="eyebrow">The chair is open</p>
+          <h2 id="cta-title" class="cta__title">Book your next cut at Oakmont.</h2>
+          <a class="btn btn--primary btn--lg" href="#booking">Book an appointment</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="brand__name">
+            Oakmont <span class="brand__sub">Barber Co.</span>
+          </span>
+          <p>Traditional barbering in Nørrebro, Copenhagen.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="#services">Services</a>
+          <a href="#team">Team</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#hours">Hours</a>
+          <a href="#booking">Book now</a>
+        </nav>
+
+        <div class="site-footer__contact">
+          <a href="tel:+4532145509">+45 32 14 55 09</a>
+          <a href="mailto:booking@oakmontbarber.dk">booking@oakmontbarber.dk</a>
+          <span>Ravnsborggade 14, 2200 København N</span>
+        </div>
+      </div>
+
+      <div class="wrap site-footer__legal">
+        <p>
+          Oakmont Barber Co. is a <strong>fictional business</strong>. This site
+          is a concept designed and built by
+          <a href="https://crjfc2vsy2-maker.github.io/portfolio/" target="_blank" rel="noreferrer">Vladyslav</a>
+          as a portfolio piece.
+        </p>
+        <p>&copy; <span id="year"></span> &middot; Concept project</p>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Gallery image">
+      <button class="lightbox__close" type="button" id="lightboxClose" aria-label="Close">
+        &times;
+      </button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" id="lightboxImg" alt="" />
+        <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+      </figure>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
